@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI & ML Roles</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f4f8;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+      margin-bottom: 30px;
+    }
+
+    .role-card {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      margin: 20px auto;
+      max-width: 600px;
+      padding: 20px;
+      transition: 0.3s;
+    }
+
+    .role-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      font-size: 1.2em;
+      color: #34495e;
+    }
+
+    .arrow {
+      font-size: 1.2em;
+      transition: transform 0.3s ease;
+    }
+
+    .arrow.rotate {
+      transform: rotate(90deg);
+    }
+
+    .learning-content {
+      margin-top: 15px;
+      text-align: left;
+      padding-left: 10px;
+      display: none;
+      color: #555;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    .button-container {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .opportunities-button {
+      padding: 12px 24px;
+      font-size: 16px;
+      background-color: #3498db;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>AI & ML Roles</h1>
+
+  <div class="role-card">
+    <div class="role-header" onclick="toggle(this)">
+      Machine Learning Engineer <span class="arrow">&#9654;</span>
+    </div>
+    <div class="learning-content">
+      <ul>
+        <li>Python (NumPy, Pandas, scikit-learn)</li>
+        <li>ML Algorithms</li>
+        <li>Data Preprocessing</li>
+        <li>TensorFlow / PyTorch</li>
+        <li>MLOps Basics</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="role-card">
+    <div class="role-header" onclick="toggle(this)">
+      AI Engineer <span class="arrow">&#9654;</span>
+    </div>
+    <div class="learning-content">
+      <ul>
+        <li>Deep Learning (ANN, CNN, RNN)</li>
+        <li>Python, TensorFlow, Keras</li>
+        <li>Reinforcement Learning</li>
+        <li>AI Project Design</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="role-card">
+    <div class="role-header" onclick="toggle(this)">
+      Data Scientist <span class="arrow">&#9654;</span>
+    </div>
+    <div class="learning-content">
+      <ul>
+        <li>Statistics & Probability</li>
+        <li>Machine Learning</li>
+        <li>Data Visualization</li>
+        <li>Python, SQL</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="role-card">
+    <div class="role-header" onclick="toggle(this)">
+      NLP Engineer <span class="arrow">&#9654;</span>
+    </div>
+    <div class="learning-content">
+      <ul>
+        <li>Text Preprocessing, Tokenization</li>
+        <li>spaCy, NLTK, Hugging Face</li>
+        <li>Transformers (BERT, GPT)</li>
+        <li>Sentiment Analysis</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="role-card">
+    <div class="role-header" onclick="toggle(this)">
+      Computer Vision Engineer <span class="arrow">&#9654;</span>
+    </div>
+    <div class="learning-content">
+      <ul>
+        <li>Image Processing (OpenCV)</li>
+        <li>Convolutional Neural Networks (CNNs)</li>
+        <li>Object Detection (YOLO, SSD)</li>
+        <li>Transfer Learning</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="role-card">
+    <div class="role-header" onclick="toggle(this)">
+      Robotics Engineer <span class="arrow">&#9654;</span>
+    </div>
+    <div class="learning-content">
+      <ul>
+        <li>Control & Embedded Systems</li>
+        <li>Computer Vision</li>
+        <li>ROS (Robot Operating System)</li>
+        <li>Python, C++</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="role-card">
+    <div class="role-header" onclick="toggle(this)">
+      Research Scientist (AI/ML) <span class="arrow">&#9654;</span>
+    </div>
+    <div class="learning-content">
+      <ul>
+        <li>Linear Algebra, Calculus</li>
+        <li>Probability & Statistics</li>
+        <li>Deep Learning Architectures</li>
+        <li>Generative Models (GANs)</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="role-card">
+    <div class="role-header" onclick="toggle(this)">
+      Deep Learning Engineer <span class="arrow">&#9654;</span>
+    </div>
+    <div class="learning-content">
+      <ul>
+        <li>ANN, CNN, RNN, GANs</li>
+        <li>TensorFlow / PyTorch (Advanced)</li>
+        <li>Hyperparameter Tuning</li>
+        <li>Model Deployment</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="role-card">
+    <div class="role-header" onclick="toggle(this)">
+      MLOps Engineer <span class="arrow">&#9654;</span>
+    </div>
+    <div class="learning-content">
+      <ul>
+        <li>CI/CD Pipelines</li>
+        <li>Docker, Kubernetes</li>
+        <li>MLflow, Airflow</li>
+        <li>Model Monitoring</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="role-card">
+    <div class="role-header" onclick="toggle(this)">
+      AI Product Manager <span class="arrow">&#9654;</span>
+    </div>
+    <div class="learning-content">
+      <ul>
+        <li>AI Fundamentals</li>
+        <li>Business Analytics</li>
+        <li>Product Lifecycle</li>
+        <li>Project Management Tools</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="role-card">
+    <div class="role-header" onclick="toggle(this)">
+      AI Architect <span class="arrow">&#9654;</span>
+    </div>
+    <div class="learning-content">
+      <ul>
+        <li>System & Data Architecture</li>
+        <li>Cloud Platforms (AWS, Azure)</li>
+        <li>APIs & Microservices</li>
+        <li>ML Pipelines</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="role-card">
+    <div class="role-header" onclick="toggle(this)">
+      Ethical AI Specialist <span class="arrow">&#9654;</span>
+    </div>
+    <div class="learning-content">
+      <ul>
+        <li>AI Ethics & Fairness</li>
+        <li>Explainable AI (XAI)</li>
+        <li>Privacy & Security in AI</li>
+        <li>Legal Frameworks</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="role-card">
+    <div class="role-header" onclick="toggle(this)">
+      AI App Developer <span class="arrow">&#9654;</span>
+    </div>
+    <div class="learning-content">
+      <ul>
+        <li>Mobile Development (Flutter, Android)</li>
+        <li>TensorFlow Lite / Core ML</li>
+        <li>On-device Model Optimization</li>
+        <li>API Integration</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Opportunities Button -->
+  <div class="button-container">
+    <button class="opportunities-button" onclick="location.href='aiml-opportunities.html'">
+      Opportunities
+    </button>
+  </div>
+
+  <script>
+    function toggle(header) {
+      const content = header.nextElementSibling;
+      const arrow = header.querySelector('.arrow');
+      content.style.display = content.style.display === "block" ? "none" : "block";
+      arrow.classList.toggle("rotate");
+    }
+  </script>
+</body>
+</html>

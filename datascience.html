@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Data Science Roles</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f4f8;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+      margin-bottom: 30px;
+    }
+
+    .role-card {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      margin: 20px auto;
+      max-width: 600px;
+      padding: 20px;
+      transition: 0.3s;
+    }
+
+    .role-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      font-size: 1.2em;
+      color: #34495e;
+    }
+
+    .arrow {
+      font-size: 1.2em;
+      transition: transform 0.3s ease;
+    }
+
+    .arrow.rotate {
+      transform: rotate(90deg);
+    }
+
+    .learning-content {
+      margin-top: 15px;
+      text-align: left;
+      padding-left: 10px;
+      display: none;
+      color: #555;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Data Science Roles </h1>
+
+  <div class="role-card">
+    <div class="role-header" onclick="toggle(this)">
+      Data Scientist <span class="arrow">&#9654;</span>
+    </div>
+    <div class="learning-content">
+      <ul>
+        <li>Python (Pandas, NumPy, Matplotlib)</li>
+        <li>Statistics & Probability</li>
+        <li>Machine Learning</li>
+        <li>Data Cleaning & Preprocessing</li>
+        <li>SQL & NoSQL</li>
+        <li>Data Visualization (Tableau/Power BI)</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="role-card">
+    <div class="role-header" onclick="toggle(this)">
+      Data Analyst <span class="arrow">&#9654;</span>
+    </div>
+    <div class="learning-content">
+      <ul>
+        <li>Excel (Advanced)</li>
+        <li>SQL for Analysis</li>
+        <li>Descriptive Statistics</li>
+        <li>Data Visualization (Tableau/Power BI)</li>
+        <li>Google Sheets, Python (Pandas)</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="role-card">
+    <div class="role-header" onclick="toggle(this)">
+      Data Engineer <span class="arrow">&#9654;</span>
+    </div>
+    <div class="learning-content">
+      <ul>
+        <li>SQL, Python/Scala</li>
+        <li>ETL Tools</li>
+        <li>Big Data Tools (Hadoop, Spark)</li>
+        <li>Data Warehousing</li>
+        <li>Cloud Platforms (AWS, Azure, GCP)</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="role-card">
+    <div class="role-header" onclick="toggle(this)">
+      Machine Learning Engineer <span class="arrow">&#9654;</span>
+    </div>
+    <div class="learning-content">
+      <ul>
+        <li>Python (scikit-learn, TensorFlow, PyTorch)</li>
+        <li>Linear Algebra & Calculus</li>
+        <li>ML Algorithms</li>
+        <li>Model Deployment (Flask, Streamlit)</li>
+        <li>MLOps (MLflow, Docker)</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="role-card">
+    <div class="role-header" onclick="toggle(this)">
+      Database Administrator (DBA) <span class="arrow">&#9654;</span>
+    </div>
+    <div class="learning-content">
+      <ul>
+        <li>SQL (Advanced)</li>
+        <li>Database Design & Normalization</li>
+        <li>MySQL, PostgreSQL, MongoDB</li>
+        <li>Backup, Recovery, Security</li>
+        <li>Monitoring Tools</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="role-card">
+    <div class="role-header" onclick="toggle(this)">
+      BI Analyst (Business Intelligence) <span class="arrow">&#9654;</span>
+    </div>
+    <div class="learning-content">
+      <ul>
+        <li>SQL & Excel</li>
+        <li>BI Tools (Power BI, Tableau)</li>
+        <li>Data Warehousing</li>
+        <li>Business Metrics & KPIs</li>
+        <li>Dashboard Design</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="role-card">
+    <div class="role-header" onclick="toggle(this)">
+      Data Architect <span class="arrow">&#9654;</span>
+    </div>
+    <div class="learning-content">
+      <ul>
+        <li>Data Modeling & Design</li>
+        <li>Big Data Frameworks</li>
+        <li>Cloud Platforms (AWS, GCP)</li>
+        <li>ETL Tools</li>
+        <li>Database & API Design</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="role-card">
+    <div class="role-header" onclick="toggle(this)">
+      NLP Engineer <span class="arrow">&#9654;</span>
+    </div>
+    <div class="learning-content">
+      <ul>
+        <li>Text Preprocessing</li>
+        <li>NLTK, spaCy, Hugging Face</li>
+        <li>Deep Learning (RNNs, Transformers)</li>
+        <li>Language Models (BERT, GPT)</li>
+        <li>Sentiment Analysis, Chatbots</li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    function toggle(header) {
+      const content = header.nextElementSibling;
+      const arrow = header.querySelector('.arrow');
+      content.style.display = content.style.display === "block" ? "none" : "block";
+      arrow.classList.toggle("rotate");
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cyber Security Roles</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f6f8;
+      margin: 0;
+      padding: 30px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+    }
+
+    .role-card {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      padding: 20px;
+      margin: 15px auto;
+      width: 90%;
+      max-width: 700px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .role-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 1.2em;
+      font-weight: bold;
+      color: #34495e;
+    }
+
+    .arrow {
+      transition: transform 0.3s ease;
+    }
+
+    .arrow.rotate {
+      transform: rotate(90deg);
+    }
+
+    .learn-section {
+      margin-top: 10px;
+      padding-left: 10px;
+      display: none;
+      color: #555;
+    }
+
+    .learn-section ul {
+      padding-left: 20px;
+      margin: 0;
+    }
+
+    .learn-section li {
+      margin-bottom: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Cyber Security Roles</h1>
+
+  <div class="role-card" onclick="toggleSection(this)">
+    <div class="role-header">Security Analyst <span class="arrow">&#9654;</span></div>
+    <div class="learn-section">
+      <ul>
+        <li>Network Security</li>
+        <li>Firewalls & IDS/IPS</li>
+        <li>SIEM Tools (Splunk, QRadar)</li>
+        <li>Linux & Scripting (Bash, Python)</li>
+        <li>Risk Management</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="role-card" onclick="toggleSection(this)">
+    <div class="role-header">Penetration Tester <span class="arrow">&#9654;</span></div>
+    <div class="learn-section">
+      <ul>
+        <li>Ethical Hacking (CEH)</li>
+        <li>Kali Linux</li>
+        <li>Metasploit, Burp Suite</li>
+        <li>Web Application Security</li>
+        <li>OSINT Techniques</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="role-card" onclick="toggleSection(this)">
+    <div class="role-header">Security Engineer <span class="arrow">&#9654;</span></div>
+    <div class="learn-section">
+      <ul>
+        <li>Secure Network Design</li>
+        <li>Cryptography</li>
+        <li>Cloud Security (AWS, Azure)</li>
+        <li>DevSecOps Tools</li>
+        <li>Threat Modeling</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="role-card" onclick="toggleSection(this)">
+    <div class="role-header">Incident Responder <span class="arrow">&#9654;</span></div>
+    <div class="learn-section">
+      <ul>
+        <li>Incident Handling</li>
+        <li>Digital Forensics Basics</li>
+        <li>Malware Analysis</li>
+        <li>Log Analysis & SIEM</li>
+        <li>Communication Skills</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="role-card" onclick="toggleSection(this)">
+    <div class="role-header">Security Architect <span class="arrow">&#9654;</span></div>
+    <div class="learn-section">
+      <ul>
+        <li>Enterprise Security Architecture</li>
+        <li>Risk Assessment Frameworks</li>
+        <li>Secure Coding Principles</li>
+        <li>Cloud & Network Design</li>
+        <li>Compliance Standards (ISO 27001)</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="role-card" onclick="toggleSection(this)">
+    <div class="role-header">CISO (Chief Info Security Officer) <span class="arrow">&#9654;</span></div>
+    <div class="learn-section">
+      <ul>
+        <li>Cyber Laws & Compliance (GDPR, HIPAA)</li>
+        <li>Risk Management</li>
+        <li>Business Continuity Planning</li>
+        <li>Leadership & Strategy</li>
+        <li>Budgeting & Policy Making</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="role-card" onclick="toggleSection(this)">
+    <div class="role-header">Cryptographer <span class="arrow">&#9654;</span></div>
+    <div class="learn-section">
+      <ul>
+        <li>Advanced Cryptography</li>
+        <li>Mathematics (Number Theory, Algebra)</li>
+        <li>Python/Java Cryptographic Libraries</li>
+        <li>Blockchain Basics</li>
+        <li>Secure Protocols</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="role-card" onclick="toggleSection(this)">
+    <div class="role-header">Malware Analyst <span class="arrow">&#9654;</span></div>
+    <div class="learn-section">
+      <ul>
+        <li>Reverse Engineering</li>
+        <li>Assembly Language</li>
+        <li>Malware Sandboxing Tools</li>
+        <li>Static & Dynamic Analysis</li>
+        <li>Disassemblers (IDA Pro, Ghidra)</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="role-card" onclick="toggleSection(this)">
+    <div class="role-header">Risk Analyst <span class="arrow">&#9654;</span></div>
+    <div class="learn-section">
+      <ul>
+        <li>Risk Assessment Tools</li>
+        <li>NIST Framework</li>
+        <li>ISO Standards</li>
+        <li>Business Impact Analysis</li>
+        <li>Documentation Skills</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="role-card" onclick="toggleSection(this)">
+    <div class="role-header">Digital Forensics Expert <span class="arrow">&#9654;</span></div>
+    <div class="learn-section">
+      <ul>
+        <li>Forensics Tools (Autopsy, FTK, EnCase)</li>
+        <li>File System Analysis</li>
+        <li>Chain of Custody</li>
+        <li>Report Writing</li>
+        <li>Legal Procedures in Cyber Crime</li>
+      </ul>
+    </div>
+  </div>
+
+  <div style="margin-top: 50px; text-align: center;">
+    <p>Want to know Something More? 
+    <a href="jobdistrubution.html" style="color: #3498db; font-weight: bold;">
+    Click here to find out!</a></p>
+  </div>
+
+
+  <script>
+    function toggleSection(card) {
+      const section = card.querySelector('.learn-section');
+      const arrow = card.querySelector('.arrow');
+      const isOpen = section.style.display === 'block';
+
+      section.style.display = isOpen ? 'none' : 'block';
+      arrow.classList.toggle('rotate', !isOpen);
+    }
+  </script>
+</body>
+</html>
