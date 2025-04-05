@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,6 +16,9 @@
     h1 {
       color: #2c3e50;
       font-size: 26px;
+    }
+    .button-container{
+        margin: 20px 0;
     }
     button {
       background-color: #3498db;
@@ -34,6 +38,19 @@
       max-width: 800px;
       margin: 30px auto;
       text-align: left;
+    }
+    .job-container {
+      max-width: 600px;
+      margin: 20px auto;
+      text-align: left;
+      display: none; /* Initially Hidden */
+    }
+    .job-item {
+      margin-bottom: 20px;
+    }
+    .job-title {
+      font-weight: bold;
+      margin-bottom: 5px;
     }
     .role-title {
       font-weight: bold;
@@ -67,16 +84,19 @@
       margin-bottom: 15px;
       box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
     }
+    
     .progress-fill {
-      height: 100%;
-      color: white;
-      text-align: right;
-      padding-right: 10px;
-      line-height: 20px;
-      font-size: 14px;
-      font-weight: bold;
-      border-radius: 10px;
-    }
+  height: 100%;
+  color: white;
+  text-align: right;
+  padding-right: 10px;
+  line-height: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 10px;
+  transition: width 4s ease-in-out; /* Smooth and slow animation */
+}
+
     .security-analyst { background-color: #3498db; width: 30%; }
     .penetration-tester { background-color: #e74c3c; width: 15%; }
     .security-engineer { background-color: #2ecc71; width: 20%; }
@@ -92,27 +112,59 @@
 <body>
 
 <h1>Cybersecurity Career Paths</h1>
-
+  
+<div style="margin-top: 50px; text-align: center;">
 <p>Explore different career opportunities in cybersecurity.</p>
-
-<div>
+</div>
+  
+<div class="button-container">
   <button onclick="showJobOpportunities()">Show Job Opportunities</button>
   <button onclick="showEntrepreneurSection()">For Entrepreneurs</button>
 </div>
+<div class="job-container" id="jobContainer">
+    <h2>Cybersecurity Job Market Distribution</h2>
 
-<div class="progress-container" id="jobContainer" style="display: none;">
-  <h2>Cybersecurity Job Market Distribution</h2>
-  <div><strong>Security Analyst (30%)</strong><div class="progress-bar"><div class="progress-fill security-analyst">30%</div></div></div>
-  <div><strong>Penetration Tester (15%)</strong><div class="progress-bar"><div class="progress-fill penetration-tester">15%</div></div></div>
-  <div><strong>Security Engineer (20%)</strong><div class="progress-bar"><div class="progress-fill security-engineer">20%</div></div></div>
-  <div><strong>Incident Responder (10%)</strong><div class="progress-bar"><div class="progress-fill incident-responder">10%</div></div></div>
-  <div><strong>Security Architect (8%)</strong><div class="progress-bar"><div class="progress-fill security-architect">8%</div></div></div>
-  <div><strong>CISO (5%)</strong><div class="progress-bar"><div class="progress-fill ciso">5%</div></div></div>
-  <div><strong>Cryptographer (4%)</strong><div class="progress-bar"><div class="progress-fill cryptographer">4%</div></div></div>
-  <div><strong>Malware Analyst (4%)</strong><div class="progress-bar"><div class="progress-fill malware-analyst">4%</div></div></div>
-  <div><strong>Risk Analyst (2%)</strong><div class="progress-bar"><div class="progress-fill risk-analyst">2%</div></div></div>
-  <div><strong>Digital Forensics Expert (2%)</strong><div class="progress-bar"><div class="progress-fill digital-forensics">2%</div></div></div>
-</div>
+    <div class="job-item">
+      <div class="job-title">Security Analyst (30%)</div>
+      <div class="progress-bar"><div class="progress-fill security-analyst" data-width="30%">30%</div></div>
+    </div>
+    <div class="job-item">
+      <div class="job-title">Penetration Tester (15%)</div>
+      <div class="progress-bar"><div class="progress-fill penetration-tester" data-width="15%">15%</div></div>
+    </div>
+    <div class="job-item">
+      <div class="job-title">Security Engineer (20%) </div>
+      <div class="progress-bar"><div class="progress-fill security-engineer" data-width="20%">20%</div></div>
+    </div>
+    <div class="job-item">
+      <div class="job-title">Incident Responder (10%)</div>
+      <div class="progress-bar"><div class="progress-fill incident-responder" data-width="10%">10%</div></div>
+    </div>
+    <div class="job-item">
+      <div class="job-title">Security Architect (8%)</div>
+      <div class="progress-bar"><div class="progress-fill security-architect" data-width="8%">8%</div></div>
+    </div>
+    <div class="job-item">
+      <div class="job-title">CISO (Chief Information Security Officer) (5%)</div>
+      <div class="progress-bar"><div class="progress-fill ciso" data-width="5%">5%</div></div>
+    </div>
+    <div class="job-item">
+      <div class="job-title">Cryptographer (4%)</div>
+      <div class="progress-bar"><div class="progress-fill cryptographer" data-width="4%">4%</div></div>
+    </div>
+    <div class="job-item">
+      <div class="job-title">Malware Analyst (4%)</div>
+      <div class="progress-bar"><div class="progress-fill malware-analyst" data-width="4%">4%</div></div>
+    </div>
+    <div class="job-item">
+      <div class="job-title">Risk Analyst (2%) </div>
+      <div class="progress-bar"><div class="progress-fill risk-analyst" data-width="2%">2%</div></div>
+    </div>
+    <div class="job-item">
+      <div class="job-title">Digital Forensics Expert (2%)</div>
+      <div class="progress-bar"><div class="progress-fill digital-forensics" data-width="2%">2%</div></div>
+    </div>
+  </div>
 
 <div class="section" id="entrepreneurContainer" style="display: none;">
   <h2>Cybersecurity Startup Ideas by Role</h2>
@@ -179,9 +231,25 @@
 
 <script>
 function showJobOpportunities() {
-  document.getElementById("jobContainer").style.display = "block";
-  document.getElementById("entrepreneurContainer").style.display = "none";
+  let jobContainer = document.getElementById("jobContainer");
+  jobContainer.style.display = "block";
+
+  let progressBars = document.querySelectorAll(".progress-fill");
+
+  // Reset widths to 0 first to allow re-animation
+  progressBars.forEach(bar => {
+    bar.style.width = "0";
+  });
+
+  // Then animate to target width
+  setTimeout(() => {
+    progressBars.forEach(bar => {
+      let width = bar.getAttribute("data-width");
+      bar.style.width = width;
+    });
+  }, 100); // slight delay to allow reset to apply
 }
+
 
 function showEntrepreneurSection() {
   const job = document.getElementById("jobContainer");
