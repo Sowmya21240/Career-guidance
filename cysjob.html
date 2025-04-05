@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cybersecurity Career Paths</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f6f8;
+      margin: 0;
+      padding: 30px;
+      text-align: center;
+    }
+    h1 {
+      color: #2c3e50;
+      font-size: 26px;
+    }
+    button {
+      background-color: #3498db;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      margin: 10px;
+      transition: 0.3s;
+    }
+    button:hover {
+      background-color: #2980b9;
+    }
+    .section {
+      max-width: 800px;
+      margin: 30px auto;
+      text-align: left;
+    }
+    .role-title {
+      font-weight: bold;
+      font-size: 18px;
+      cursor: pointer;
+      background: #ecf0f1;
+      padding: 10px;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+    .startup-ideas {
+      display: none;
+      padding: 10px 20px;
+      background: #ffffff;
+      border-left: 3px solid #3498db;
+      margin-bottom: 10px;
+    }
+    .idea {
+      margin-bottom: 10px;
+    }
+    .progress-container {
+      margin: 30px auto;
+      max-width: 800px;
+      text-align: left;
+    }
+    .progress-bar {
+      background-color: #ddd;
+      border-radius: 10px;
+      overflow: hidden;
+      height: 20px;
+      margin-bottom: 15px;
+      box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+    }
+    .progress-fill {
+      height: 100%;
+      color: white;
+      text-align: right;
+      padding-right: 10px;
+      line-height: 20px;
+      font-size: 14px;
+      font-weight: bold;
+      border-radius: 10px;
+    }
+    .security-analyst { background-color: #3498db; width: 30%; }
+    .penetration-tester { background-color: #e74c3c; width: 15%; }
+    .security-engineer { background-color: #2ecc71; width: 20%; }
+    .incident-responder { background-color: #f39c12; width: 10%; }
+    .security-architect { background-color: #9b59b6; width: 8%; }
+    .ciso { background-color: #34495e; width: 5%; }
+    .cryptographer { background-color: #1abc9c; width: 4%; }
+    .malware-analyst { background-color: #e67e22; width: 4%; }
+    .risk-analyst { background-color: #16a085; width: 2%; }
+    .digital-forensics { background-color: #c0392b; width: 2%; }
+  </style>
+</head>
+<body>
+
+<h1>Cybersecurity Career Paths</h1>
+
+<p>Explore different career opportunities in cybersecurity.</p>
+
+<div>
+  <button onclick="showJobOpportunities()">Show Job Opportunities</button>
+  <button onclick="showEntrepreneurSection()">For Entrepreneurs</button>
+</div>
+
+<div class="progress-container" id="jobContainer" style="display: none;">
+  <h2>Cybersecurity Job Market Distribution</h2>
+  <div><strong>Security Analyst (30%)</strong><div class="progress-bar"><div class="progress-fill security-analyst">30%</div></div></div>
+  <div><strong>Penetration Tester (15%)</strong><div class="progress-bar"><div class="progress-fill penetration-tester">15%</div></div></div>
+  <div><strong>Security Engineer (20%)</strong><div class="progress-bar"><div class="progress-fill security-engineer">20%</div></div></div>
+  <div><strong>Incident Responder (10%)</strong><div class="progress-bar"><div class="progress-fill incident-responder">10%</div></div></div>
+  <div><strong>Security Architect (8%)</strong><div class="progress-bar"><div class="progress-fill security-architect">8%</div></div></div>
+  <div><strong>CISO (5%)</strong><div class="progress-bar"><div class="progress-fill ciso">5%</div></div></div>
+  <div><strong>Cryptographer (4%)</strong><div class="progress-bar"><div class="progress-fill cryptographer">4%</div></div></div>
+  <div><strong>Malware Analyst (4%)</strong><div class="progress-bar"><div class="progress-fill malware-analyst">4%</div></div></div>
+  <div><strong>Risk Analyst (2%)</strong><div class="progress-bar"><div class="progress-fill risk-analyst">2%</div></div></div>
+  <div><strong>Digital Forensics Expert (2%)</strong><div class="progress-bar"><div class="progress-fill digital-forensics">2%</div></div></div>
+</div>
+
+<div class="section" id="entrepreneurContainer" style="display: none;">
+  <h2>Cybersecurity Startup Ideas by Role</h2>
+  <div class="role-title" onclick="toggleIdeas('analystIdeas')">▶ Security Analyst</div>
+  <div id="analystIdeas" class="startup-ideas">
+    <div class="idea">💡 <strong>Threat Monitoring Platform for SMEs</strong><br>What: Real-time dashboards for detecting suspicious activity.<br>Investment: ₹4–7 lakhs</div>
+    <div class="idea">💡 <strong>Security Awareness Training Platform</strong><br>What: Gamified training for employees on phishing & cyber hygiene.<br>Investment: ₹3–5 lakhs</div>
+  </div>
+
+  <div class="role-title" onclick="toggleIdeas('pentestIdeas')">▶ Penetration Tester</div>
+  <div id="pentestIdeas" class="startup-ideas">
+    <div class="idea">💡 <strong>Automated Pentest-as-a-Service</strong><br>What: Self-serve platform for security testing.<br>Investment: ₹6–10 lakhs</div>
+    <div class="idea">💡 <strong>Red Team Consultancy</strong><br>What: Simulated cyberattacks as a service.<br>Investment: ₹2–4 lakhs</div>
+  </div>
+
+  <div class="role-title" onclick="toggleIdeas('engineerIdeas')">▶ Security Engineer</div>
+  <div id="engineerIdeas" class="startup-ideas">
+    <div class="idea">💡 <strong>Secure App Dev Framework</strong><br>What: Pre-built modules to integrate encryption & auth.<br>Investment: ₹4–8 lakhs</div>
+    <div class="idea">💡 <strong>Cloud Security Monitoring SaaS</strong><br>What: Tool for detecting misconfigs in cloud infra.<br>Investment: ₹5–9 lakhs</div>
+  </div>
+
+  <div class="role-title" onclick="toggleIdeas('responderIdeas')">▶ Incident Responder</div>
+  <div id="responderIdeas" class="startup-ideas">
+    <div class="idea">💡 <strong>Breach Response-as-a-Service</strong><br>What: Rapid response team on call for SMEs.<br>Investment: ₹6–10 lakhs</div>
+    <div class="idea">💡 <strong>Automated Forensics Tool</strong><br>What: Tool to collect logs & indicators post-attack.<br>Investment: ₹3–6 lakhs</div>
+  </div>
+
+  <div class="role-title" onclick="toggleIdeas('architectIdeas')">▶ Security Architect</div>
+  <div id="architectIdeas" class="startup-ideas">
+    <div class="idea">💡 <strong>Secure System Design Consulting</strong><br>What: Blueprints for secure infra for startups.<br>Investment: ₹4–7 lakhs</div>
+    <div class="idea">💡 <strong>Zero Trust Network Builder</strong><br>What: SaaS to set up zero-trust networks easily.<br>Investment: ₹6–10 lakhs</div>
+  </div>
+
+  <div class="role-title" onclick="toggleIdeas('cisoIdeas')">▶ CISO</div>
+  <div id="cisoIdeas" class="startup-ideas">
+    <div class="idea">💡 <strong>vCISO Services</strong><br>What: Outsourced CISO offerings for startups.<br>Investment: ₹3–6 lakhs</div>
+    <div class="idea">💡 <strong>Compliance Automation Platform</strong><br>What: Auto audit tools for ISO, SOC2, GDPR.<br>Investment: ₹5–8 lakhs</div>
+  </div>
+
+  <div class="role-title" onclick="toggleIdeas('cryptoIdeas')">▶ Cryptographer</div>
+  <div id="cryptoIdeas" class="startup-ideas">
+    <div class="idea">💡 <strong>Post-Quantum Encryption Tools</strong><br>What: Develop quantum-safe encryption APIs.<br>Investment: ₹8–12 lakhs</div>
+    <div class="idea">💡 <strong>Secure Messaging SDK</strong><br>What: Libraries for encrypted chat/email apps.<br>Investment: ₹4–7 lakhs</div>
+  </div>
+
+  <div class="role-title" onclick="toggleIdeas('malwareIdeas')">▶ Malware Analyst</div>
+  <div id="malwareIdeas" class="startup-ideas">
+    <div class="idea">💡 <strong>Malware Sandbox Analyzer</strong><br>What: Online tool to test suspicious files.<br>Investment: ₹5–9 lakhs</div>
+    <div class="idea">💡 <strong>Threat Intelligence Feed Service</strong><br>What: API delivering latest IOCs & threats.<br>Investment: ₹4–6 lakhs</div>
+  </div>
+
+  <div class="role-title" onclick="toggleIdeas('riskIdeas')">▶ Risk Analyst</div>
+  <div id="riskIdeas" class="startup-ideas">
+    <div class="idea">💡 <strong>Risk Scoring Platform</strong><br>What: Rate org’s cyber risk based on data points.<br>Investment: ₹3–5 lakhs</div>
+    <div class="idea">💡 <strong>SMB Cyber Insurance Tool</strong><br>What: Helps assess & offer cyber insurance.<br>Investment: ₹4–7 lakhs</div>
+  </div>
+
+  <div class="role-title" onclick="toggleIdeas('forensicsIdeas')">▶ Digital Forensics Expert</div>
+  <div id="forensicsIdeas" class="startup-ideas">
+    <div class="idea">💡 <strong>Mobile Forensics Kit</strong><br>What: Portable toolkit for analyzing phones.<br>Investment: ₹4–6 lakhs</div>
+    <div class="idea">💡 <strong>Chain-of-Custody SaaS</strong><br>What: Secure case & evidence management system.<br>Investment: ₹5–8 lakhs</div>
+  </div>
+</div>
+
+<script>
+function showJobOpportunities() {
+  document.getElementById("jobContainer").style.display = "block";
+  document.getElementById("entrepreneurContainer").style.display = "none";
+}
+
+function showEntrepreneurSection() {
+  const job = document.getElementById("jobContainer");
+  const entrepreneur = document.getElementById("entrepreneurContainer");
+
+  job.style.display = "none";
+  entrepreneur.style.display = "block";
+}
+
+function toggleIdeas(id) {
+  const el = document.getElementById(id);
+  el.style.display = (el.style.display === 'block') ? 'none' : 'block';
+}
+</script>
+
+</body>
+</html>
