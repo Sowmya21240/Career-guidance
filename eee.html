@@ -1,66 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>EEE Career Paths</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EEE Roles</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      margin: 30px;
-      background-color: #f7f9fc;
-      color: #333;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f4f8;
+      margin: 0;
+      padding: 20px;
     }
 
     h1 {
       text-align: center;
-      color: #2e3a59;
+      color: #2c3e50;
+      margin-bottom: 30px;
     }
 
     .role-card {
       background-color: #fff;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      margin: 15px 0;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      overflow: hidden;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      margin: 20px auto;
+      max-width: 600px;
+      padding: 20px;
+      transition: 0.3s;
     }
 
     .role-header {
-      background-color: #eef1f7;
-      padding: 15px 20px;
-      font-size: 18px;
-      font-weight: bold;
-      cursor: pointer;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      cursor: pointer;
+      font-size: 1.2em;
+      color: #34495e;
     }
 
     .arrow {
-      transition: transform 0.3s;
+      font-size: 1.2em;
+      transition: transform 0.3s ease;
     }
 
-    .rotate {
+    .arrow.rotate {
       transform: rotate(90deg);
     }
 
     .learning-content {
+      margin-top: 15px;
+      text-align: left;
+      padding-left: 10px;
       display: none;
-      padding: 15px 20px;
-      background-color: #fafafa;
+      color: #555;
     }
 
-    .learning-content ul {
+    ul {
       padding-left: 20px;
-    }
-
-    .learning-content li {
-      margin-bottom: 8px;
     }
   </style>
 </head>
 <body>
-
   <h1>EEE Roles</h1>
 
   <div class="role-card">
@@ -69,56 +68,38 @@
     </div>
     <div class="learning-content">
       <ul>
-        <li>Circuit Theory</li>
-        <li>Electrical Machines</li>
-        <li>Power Systems</li>
-        <li>Analog & Digital Electronics</li>
-        <li>Electrical Drawing and CAD Tools</li>
+        <li>AutoCAD Electrical</li>
+        <li>Electrical Schematics</li>
+        <li>Power Systems Basics</li>
+        <li>Load Flow Analysis</li>
       </ul>
     </div>
   </div>
 
   <div class="role-card">
     <div class="role-header" onclick="toggle(this)">
-      Embedded Systems Engineer <span class="arrow">&#9654;</span>
+      Power Systems Engineer <span class="arrow">&#9654;</span>
     </div>
     <div class="learning-content">
       <ul>
-        <li>Microprocessors and Microcontrollers</li>
-        <li>Embedded System Design</li>
-        <li>Digital Electronics</li>
-        <li>C/C++ Programming</li>
-        <li>Real-Time Operating Systems (RTOS)</li>
+        <li>Transmission & Distribution</li>
+        <li>Grid Stability</li>
+        <li>SCADA Systems</li>
+        <li>Protection & Relays</li>
       </ul>
     </div>
   </div>
 
   <div class="role-card">
     <div class="role-header" onclick="toggle(this)">
-      Power Electronics Engineer <span class="arrow">&#9654;</span>
+      Energy Storage Specialist <span class="arrow">&#9654;</span>
     </div>
     <div class="learning-content">
       <ul>
+        <li>Battery Technologies</li>
+        <li>Energy Management Systems</li>
         <li>Power Electronics</li>
-        <li>Electrical Machines</li>
-        <li>Control Systems</li>
-        <li>Analog Electronics</li>
-        <li>Signals & Systems</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="role-card">
-    <div class="role-header" onclick="toggle(this)">
-      Instrumentation Engineer <span class="arrow">&#9654;</span>
-    </div>
-    <div class="learning-content">
-      <ul>
-        <li>Measurement & Instrumentation</li>
-        <li>Sensors & Transducers</li>
-        <li>Control Systems</li>
-        <li>Analog & Digital Circuits</li>
-        <li>Industrial Automation</li>
+        <li>Smart Charging Systems</li>
       </ul>
     </div>
   </div>
@@ -129,26 +110,24 @@
     </div>
     <div class="learning-content">
       <ul>
-        <li>Control Systems</li>
-        <li>Signals and Systems</li>
-        <li>Linear Algebra and Differential Equations</li>
-        <li>MATLAB/Simulink for Modeling</li>
-        <li>Process Control</li>
+        <li>PID Controllers</li>
+        <li>State Space Models</li>
+        <li>MATLAB / Simulink</li>
+        <li>PLC Programming</li>
       </ul>
     </div>
   </div>
 
   <div class="role-card">
     <div class="role-header" onclick="toggle(this)">
-      Renewable Energy Engineer <span class="arrow">&#9654;</span>
+      Instrumentation Engineer <span class="arrow">&#9654;</span>
     </div>
     <div class="learning-content">
       <ul>
-        <li>Renewable Energy Systems</li>
-        <li>Power Systems</li>
-        <li>Power Electronics</li>
-        <li>Energy Storage Systems</li>
-        <li>Smart Grids</li>
+        <li>Sensors & Transducers</li>
+        <li>Measurement Systems</li>
+        <li>Data Acquisition</li>
+        <li>LabVIEW</li>
       </ul>
     </div>
   </div>
@@ -159,76 +138,55 @@
     </div>
     <div class="learning-content">
       <ul>
-        <li>Electrical Machines</li>
-        <li>Power Systems</li>
-        <li>Protection & Switchgear</li>
-        <li>Industrial Safety</li>
-        <li>Maintenance Engineering</li>
+        <li>Preventive Maintenance</li>
+        <li>Fault Analysis</li>
+        <li>Electrical Safety Standards</li>
+        <li>Maintenance Tools</li>
       </ul>
     </div>
   </div>
 
   <div class="role-card">
     <div class="role-header" onclick="toggle(this)">
-      VLSI Design Engineer <span class="arrow">&#9654;</span>
+      Renewable Energy Engineer <span class="arrow">&#9654;</span>
     </div>
     <div class="learning-content">
       <ul>
-        <li>Digital System Design</li>
-        <li>VLSI Design</li>
-        <li>Verilog/VHDL Programming</li>
-        <li>CMOS Technology</li>
-        <li>Semiconductor Devices</li>
+        <li>Solar & Wind Systems</li>
+        <li>Grid Integration</li>
+        <li>Inverters & Controllers</li>
+        <li>Green Building Concepts</li>
       </ul>
     </div>
   </div>
 
   <div class="role-card">
     <div class="role-header" onclick="toggle(this)">
-      Robotics Engineer <span class="arrow">&#9654;</span>
+      Electrical Project Engineer <span class="arrow">&#9654;</span>
     </div>
     <div class="learning-content">
       <ul>
-        <li>Control Systems</li>
-        <li>Embedded Systems</li>
-        <li>Actuators and Sensors</li>
-        <li>Robotics & Automation</li>
-        <li>Mechatronics</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="role-card">
-    <div class="role-header" onclick="toggle(this)">
-      Electric Vehicle (EV) Engineer <span class="arrow">&#9654;</span>
-    </div>
-    <div class="learning-content">
-      <ul>
-        <li>Electrical Machines & Drives</li>
-        <li>Battery Management Systems</li>
-        <li>Power Electronics</li>
-        <li>Electric Vehicle Technology</li>
-        <li>Vehicle Dynamics</li>
+        <li>Project Planning & Costing</li>
+        <li>Project Documentation</li>
+        <li>Vendor Coordination</li>
+        <li>Compliance & QA</li>
       </ul>
     </div>
   </div>
 
   <div style="margin-top: 50px; text-align: center;">
-    <p>Want to know Something More? 
+    <p>Want to explore more about EEE? 
     <a href="eeejob.html" style="color: #3498db; font-weight: bold;">
-    Click here to find out!</a></p>
+    Click here to learn further!</a></p>
   </div>
 
   <script>
-    function toggle(card) {
-      const content = card.nextElementSibling;
-      const arrow = card.querySelector('.arrow');
-      const isOpen = content.style.display === 'block';
-
-      content.style.display = isOpen ? 'none' : 'block';
-      arrow.classList.toggle('rotate', !isOpen);
+    function toggle(header) {
+      const content = header.nextElementSibling;
+      const arrow = header.querySelector('.arrow');
+      content.style.display = content.style.display === "block" ? "none" : "block";
+      arrow.classList.toggle("rotate");
     }
   </script>
-
 </body>
 </html>
