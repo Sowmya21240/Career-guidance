@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ECE Roles</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f4f8;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+      margin-bottom: 30px;
+    }
+
+    .role-card {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      margin: 20px auto;
+      max-width: 600px;
+      padding: 20px;
+      transition: 0.3s;
+    }
+
+    .role-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      font-size: 1.2em;
+      color: #34495e;
+    }
+
+    .arrow {
+      font-size: 1.2em;
+      transition: transform 0.3s ease;
+    }
+
+    .arrow.rotate {
+      transform: rotate(90deg);
+    }
+
+    .learning-content {
+      margin-top: 15px;
+      text-align: left;
+      padding-left: 10px;
+      display: none;
+      color: #555;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>ECE Roles</h1>
+
+  <div class="role-card">
+    <div class="role-header" onclick="toggle(this)">
+      Embedded Systems Engineer <span class="arrow">&#9654;</span>
+    </div>
+    <div class="learning-content">
+      <ul>
+        <li>Embedded C Programming</li>
+        <li>Microcontrollers (ARM, 8051)</li>
+        <li>RTOS, Interrupts</li>
+        <li>IoT Basics</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="role-card">
+    <div class="role-header" onclick="toggle(this)">
+      VLSI Design Engineer <span class="arrow">&#9654;</span>
+    </div>
+    <div class="learning-content">
+      <ul>
+        <li>Verilog / VHDL</li>
+        <li>FPGA and ASIC Design</li>
+        <li>CMOS VLSI</li>
+        <li>Cadence Tools</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="role-card">
+    <div class="role-header" onclick="toggle(this)">
+      Signal Processing Engineer <span class="arrow">&#9654;</span>
+    </div>
+    <div class="learning-content">
+      <ul>
+        <li>Digital Signal Processing (DSP)</li>
+        <li>MATLAB, Python</li>
+        <li>Image and Audio Processing</li>
+        <li>Fourier & Laplace Transforms</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="role-card">
+    <div class="role-header" onclick="toggle(this)">
+      Communication Engineer <span class="arrow">&#9654;</span>
+    </div>
+    <div class="learning-content">
+      <ul>
+        <li>Wireless Communication</li>
+        <li>Modulation Techniques</li>
+        <li>RF & Microwave Engineering</li>
+        <li>Antennas & Propagation</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="role-card">
+    <div class="role-header" onclick="toggle(this)">
+      Hardware Design Engineer <span class="arrow">&#9654;</span>
+    </div>
+    <div class="learning-content">
+      <ul>
+        <li>PCB Design (Altium, Eagle)</li>
+        <li>Analog & Digital Circuits</li>
+        <li>Circuit Simulation Tools</li>
+        <li>Power Electronics</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="role-card">
+    <div class="role-header" onclick="toggle(this)">
+      IoT Engineer <span class="arrow">&#9654;</span>
+    </div>
+    <div class="learning-content">
+      <ul>
+        <li>Arduino, Raspberry Pi</li>
+        <li>Sensors and Actuators</li>
+        <li>IoT Protocols (MQTT, CoAP)</li>
+        <li>Cloud Platforms (AWS, Azure)</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="role-card">
+    <div class="role-header" onclick="toggle(this)">
+      Network Engineer <span class="arrow">&#9654;</span>
+    </div>
+    <div class="learning-content">
+      <ul>
+        <li>Computer Networks</li>
+        <li>Routing & Switching</li>
+        <li>CCNA Certification</li>
+        <li>Firewall & Security Tools</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="role-card">
+    <div class="role-header" onclick="toggle(this)">
+      Control Systems Engineer <span class="arrow">&#9654;</span>
+    </div>
+    <div class="learning-content">
+      <ul>
+        <li>MATLAB / Simulink</li>
+        <li>Feedback & PID Controllers</li>
+        <li>System Stability Analysis</li>
+        <li>Automation Tools</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="role-card">
+    <div class="role-header" onclick="toggle(this)">
+      Robotics Engineer <span class="arrow">&#9654;</span>
+    </div>
+    <div class="learning-content">
+      <ul>
+        <li>Mechatronics</li>
+        <li>Embedded Systems</li>
+        <li>ROS (Robot Operating System)</li>
+        <li>Python / C++ for Robotics</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="role-card">
+    <div class="role-header" onclick="toggle(this)">
+      Technical Sales Engineer <span class="arrow">&#9654;</span>
+    </div>
+    <div class="learning-content">
+      <ul>
+        <li>Product Knowledge & Communication</li>
+        <li>CRM Tools</li>
+        <li>Technical Writing</li>
+        <li>Business Development</li>
+      </ul>
+    </div>
+  </div>
+
+  <div style="margin-top: 50px; text-align: center;">
+    <p>Want to know Something More? 
+    <a href="ecejob.html" style="color: #3498db; font-weight: bold;">
+    Click here to find out!</a></p>
+  </div>
+
+
+  <script>
+    function toggle(header) {
+      const content = header.nextElementSibling;
+      const arrow = header.querySelector('.arrow');
+      content.style.display = content.style.display === "block" ? "none" : "block";
+      arrow.classList.toggle("rotate");
+    }
+  </script>
+</body>
+</html>
