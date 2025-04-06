@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CSE Career Paths</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f6f8;
+      margin: 0;
+      padding: 30px;
+      text-align: center;
+    }
+    h1 {
+      color: #2c3e50;
+      font-size: 26px;
+    }
+    .button-container{
+        margin: 20px 0;
+    }
+    button {
+      background-color: #3498db;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      margin: 10px;
+      transition: 0.3s;
+    }
+    button:hover {
+      background-color: #2980b9;
+    }
+    .section {
+      max-width: 800px;
+      margin: 30px auto;
+      text-align: left;
+    }
+    .job-container {
+      max-width: 600px;
+      margin: 20px auto;
+      text-align: left;
+      display: none;
+    }
+    .job-item {
+      margin-bottom: 20px;
+    }
+    .job-title {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    .role-title {
+      font-weight: bold;
+      font-size: 18px;
+      cursor: pointer;
+      background: #ecf0f1;
+      padding: 10px;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+    .startup-ideas {
+      display: none;
+      padding: 10px 20px;
+      background: #ffffff;
+      border-left: 3px solid #3498db;
+      margin-bottom: 10px;
+    }
+    .idea {
+      margin-bottom: 10px;
+    }
+    .progress-container {
+      margin: 30px auto;
+      max-width: 800px;
+      text-align: left;
+    }
+    .progress-bar {
+      background-color: #ddd;
+      border-radius: 10px;
+      overflow: hidden;
+      height: 20px;
+      margin-bottom: 15px;
+      box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+    }
+
+    .progress-fill {
+      height: 100%;
+      color: white;
+      text-align: right;
+      padding-right: 10px;
+      line-height: 20px;
+      font-size: 14px;
+      font-weight: bold;
+      border-radius: 10px;
+      transition: width 4s ease-in-out;
+    }
+
+    .software-dev { background-color: #3498db; width: 20%; }
+    .web-dev { background-color: #e74c3c; width: 15%; }
+    .mobile-dev { background-color: #2ecc71; width: 10%; }
+    .data-sci { background-color: #f39c12; width: 12%; }
+    .ai-ml { background-color: #9b59b6; width: 10%; }
+    .dba { background-color: #34495e; width: 8%; }
+    .devops { background-color: #1abc9c; width: 8%; }
+    .cyber { background-color: #e67e22; width: 7%; }
+    .qa-test { background-color: #16a085; width: 5%; }
+    .system-arch { background-color: #c0392b; width: 5%; }
+  </style>
+</head>
+<body>
+
+<h1>CSE Career Paths</h1>
+
+<div style="margin-top: 50px; text-align: center;">
+<p>Explore different career opportunities in Computer Science and Engineering.</p>
+</div>
+
+<div class="button-container">
+  <button onclick="showJobOpportunities()">Show Job Opportunities</button>
+  <button onclick="showEntrepreneurSection()">For Entrepreneurs</button>
+</div>
+<div class="job-container" id="jobContainer">
+  <h2>CSE Job Market Distribution</h2>
+
+  <div class="job-item"><div class="job-title">Software Developer (20%)</div><div class="progress-bar"><div class="progress-fill software-dev" data-width="20%">20%</div></div></div>
+  <div class="job-item"><div class="job-title">Web Developer (15%)</div><div class="progress-bar"><div class="progress-fill web-dev" data-width="15%">15%</div></div></div>
+  <div class="job-item"><div class="job-title">Mobile App Developer (10%)</div><div class="progress-bar"><div class="progress-fill mobile-dev" data-width="10%">10%</div></div></div>
+  <div class="job-item"><div class="job-title">Data Scientist (12%)</div><div class="progress-bar"><div class="progress-fill data-sci" data-width="12%">12%</div></div></div>
+  <div class="job-item"><div class="job-title">AI / ML Engineer (10%)</div><div class="progress-bar"><div class="progress-fill ai-ml" data-width="10%">10%</div></div></div>
+  <div class="job-item"><div class="job-title">Database Administrator (8%)</div><div class="progress-bar"><div class="progress-fill dba" data-width="8%">8%</div></div></div>
+  <div class="job-item"><div class="job-title">DevOps Engineer (8%)</div><div class="progress-bar"><div class="progress-fill devops" data-width="8%">8%</div></div></div>
+  <div class="job-item"><div class="job-title">Cybersecurity Engineer (7%)</div><div class="progress-bar"><div class="progress-fill cyber" data-width="7%">7%</div></div></div>
+  <div class="job-item"><div class="job-title">QA / Test Engineer (5%)</div><div class="progress-bar"><div class="progress-fill qa-test" data-width="5%">5%</div></div></div>
+  <div class="job-item"><div class="job-title">System Architect (5%)</div><div class="progress-bar"><div class="progress-fill system-arch" data-width="5%">5%</div></div></div>
+</div>
+
+<div class="section" id="entrepreneurContainer" style="display: none;">
+  <h2>CSE Startup Ideas by Role</h2>
+  <div class="role-title" onclick="toggleIdeas('softwareDevIdeas')">▶ Software Developer</div>
+  <div id="softwareDevIdeas" class="startup-ideas">
+    <div class="idea">💡 <strong>Custom ERP Software for SMEs</strong><br>What: Tailored enterprise resource planning systems.<br>Investment: ₹5–10 lakhs</div>
+    <div class="idea">💡 <strong>Open Source Dev Tools</strong><br>What: SaaS dev tools monetized with support and plugins.<br>Investment: ₹3–6 lakhs</div>
+  </div>
+
+  <div class="role-title" onclick="toggleIdeas('webDevIdeas')">▶ Web Developer</div>
+  <div id="webDevIdeas" class="startup-ideas">
+    <div class="idea">💡 <strong>No-Code Website Builder</strong><br>What: Drag-and-drop site builder for local businesses.<br>Investment: ₹4–6 lakhs</div>
+    <div class="idea">💡 <strong>Freelancer Portfolio Platform</strong><br>What: Hosting and design templates for freelancers.<br>Investment: ₹2–4 lakhs</div>
+  </div>
+
+  <div class="role-title" onclick="toggleIdeas('mobileDevIdeas')">▶ Mobile App Developer</div>
+  <div id="mobileDevIdeas" class="startup-ideas">
+    <div class="idea">💡 <strong>Hyperlocal Delivery App</strong><br>What: On-demand delivery service for tier-2 cities.<br>Investment: ₹5–8 lakhs</div>
+    <div class="idea">💡 <strong>Health Tracking App</strong><br>What: Personalized wellness app using sensors.<br>Investment: ₹3–5 lakhs</div>
+  </div>
+
+  <div class="role-title" onclick="toggleIdeas('dataSciIdeas')">▶ Data Scientist</div>
+  <div id="dataSciIdeas" class="startup-ideas">
+    <div class="idea">💡 <strong>Retail Analytics SaaS</strong><br>What: Tools to predict demand and trends for stores.<br>Investment: ₹6–10 lakhs</div>
+    <div class="idea">💡 <strong>AI Resume Matcher</strong><br>What: Resume-screening SaaS for HR teams.<br>Investment: ₹4–7 lakhs</div>
+  </div>
+
+  <div class="role-title" onclick="toggleIdeas('aiMlIdeas')">▶ AI / ML Engineer</div>
+  <div id="aiMlIdeas" class="startup-ideas">
+    <div class="idea">💡 <strong>ML Model Marketplace</strong><br>What: Pre-trained models for common business problems.<br>Investment: ₹6–10 lakhs</div>
+    <div class="idea">💡 <strong>Voice AI Assistant</strong><br>What: Custom voice assistants for services.<br>Investment: ₹5–9 lakhs</div>
+  </div>
+
+  <div class="role-title" onclick="toggleIdeas('dbaIdeas')">▶ Database Administrator</div>
+  <div id="dbaIdeas" class="startup-ideas">
+    <div class="idea">💡 <strong>Database Optimization Services</strong><br>What: Performance tuning for high-traffic apps.<br>Investment: ₹3–6 lakhs</div>
+    <div class="idea">💡 <strong>Backup & Recovery SaaS</strong><br>What: Automated cloud backups with instant restore.<br>Investment: ₹5–8 lakhs</div>
+  </div>
+
+  <div class="role-title" onclick="toggleIdeas('devopsIdeas')">▶ DevOps Engineer</div>
+  <div id="devopsIdeas" class="startup-ideas">
+    <div class="idea">💡 <strong>CI/CD Automation Tools</strong><br>What: Tools to streamline software deployments.<br>Investment: ₹4–7 lakhs</div>
+    <div class="idea">💡 <strong>Infrastructure Monitoring Platform</strong><br>What: Alerts & dashboards for app infrastructure.<br>Investment: ₹6–9 lakhs</div>
+  </div>
+
+  <div class="role-title" onclick="toggleIdeas('cyberIdeas')">▶ Cybersecurity Engineer</div>
+  <div id="cyberIdeas" class="startup-ideas">
+    <div class="idea">💡 <strong>Endpoint Security Tool</strong><br>What: Anti-malware solution for remote devices.<br>Investment: ₹5–9 lakhs</div>
+    <div class="idea">💡 <strong>Secure File Sharing App</strong><br>What: Encrypted file transfers for teams.<br>Investment: ₹4–6 lakhs</div>
+  </div>
+
+  <div class="role-title" onclick="toggleIdeas('qaTestIdeas')">▶ QA / Test Engineer</div>
+  <div id="qaTestIdeas" class="startup-ideas">
+    <div class="idea">💡 <strong>Automated Testing Platform</strong><br>What: Test automation SaaS with AI bugs detection.<br>Investment: ₹4–6 lakhs</div>
+    <div class="idea">💡 <strong>Bug Bounty Community</strong><br>What: Connect testers with dev startups.<br>Investment: ₹2–4 lakhs</div>
+  </div>
+
+  <div class="role-title" onclick="toggleIdeas('systemArchIdeas')">▶ System Architect</div>
+  <div id="systemArchIdeas" class="startup-ideas">
+    <div class="idea">💡 <strong>Architecture-as-a-Service</strong><br>What: Consulting for scalable tech stacks.<br>Investment: ₹6–10 lakhs</div>
+    <div class="idea">💡 <strong>Blueprint Generator Tool</strong><br>What: Tool to auto-generate infra plans.<br>Investment: ₹3–5 lakhs</div>
+  </div>
+</div>
+
+<script>
+function showJobOpportunities() {
+  let jobContainer = document.getElementById("jobContainer");
+  let entrepreneurContainer = document.getElementById("entrepreneurContainer");
+
+  entrepreneurContainer.style.display = "none";
+  jobContainer.style.display = "block";
+
+  let progressBars = document.querySelectorAll(".progress-fill");
+  progressBars.forEach(bar => bar.style.width = "0");
+  setTimeout(() => {
+    progressBars.forEach(bar => {
+      let width = bar.getAttribute("data-width");
+      bar.style.width = width;
+    });
+  }, 100);
+}
+
+function showEntrepreneurSection() {
+  document.getElementById("jobContainer").style.display = "none";
+  document.getElementById("entrepreneurContainer").style.display = "block";
+}
+
+function toggleIdeas(id) {
+  const el = document.getElementById(id);
+  el.style.display = (el.style.display === 'block') ? 'none' : 'block';
+}
+</script>
+
+</body>
+</html>

@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Data Science Career Paths</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f6f8;
+      margin: 0;
+      padding: 30px;
+      text-align: center;
+    }
+    h1 {
+      color: #2c3e50;
+      font-size: 26px;
+    }
+    .button-container{
+        margin: 20px 0;
+    }
+    button {
+      background-color: #3498db;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      margin: 10px;
+      transition: 0.3s;
+    }
+    button:hover {
+      background-color: #2980b9;
+    }
+    .section {
+      max-width: 800px;
+      margin: 30px auto;
+      text-align: left;
+    }
+    .job-container {
+      max-width: 600px;
+      margin: 20px auto;
+      text-align: left;
+      display: none;
+    }
+    .job-item {
+      margin-bottom: 20px;
+    }
+    .job-title {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    .role-title {
+      font-weight: bold;
+      font-size: 18px;
+      cursor: pointer;
+      background: #ecf0f1;
+      padding: 10px;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+    .startup-ideas {
+      display: none;
+      padding: 10px 20px;
+      background: #ffffff;
+      border-left: 3px solid #3498db;
+      margin-bottom: 10px;
+    }
+    .idea {
+      margin-bottom: 10px;
+    }
+    .progress-bar {
+      background-color: #ddd;
+      border-radius: 10px;
+      overflow: hidden;
+      height: 20px;
+      margin-bottom: 15px;
+      box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+    }
+    .progress-fill {
+      height: 100%;
+      color: white;
+      text-align: right;
+      padding-right: 10px;
+      line-height: 20px;
+      font-size: 14px;
+      font-weight: bold;
+      border-radius: 10px;
+      transition: width 4s ease-in-out;
+    }
+    .datasci { background-color: #2ecc71; width: 20%; }
+    .dataanalyst { background-color: #3498db; width: 18%; }
+    .dataengineer { background-color: #9b59b6; width: 15%; }
+    .mlengineer { background-color: #e67e22; width: 14%; }
+    .dba { background-color: #34495e; width: 10%; }
+    .bi { background-color: #1abc9c; width: 8%; }
+    .architect { background-color: #e74c3c; width: 8%; }
+    .nlp { background-color: #f39c12; width: 7%; }
+  </style>
+</head>
+<body>
+<h1>Data Science Career Paths</h1>
+<div class="button-container">
+  <button onclick="showJobOpportunities()">Show Job Opportunities</button>
+  <button onclick="showEntrepreneurSection()">For Entrepreneurs</button>
+</div>
+<div class="job-container" id="jobContainer">
+  <h2>Job Market Distribution</h2>
+  <div class="job-item"><div class="job-title">Data Scientist (20%)</div><div class="progress-bar"><div class="progress-fill datasci" data-width="20%">20%</div></div></div>
+  <div class="job-item"><div class="job-title">Data Analyst (18%)</div><div class="progress-bar"><div class="progress-fill dataanalyst" data-width="18%">18%</div></div></div>
+  <div class="job-item"><div class="job-title">Data Engineer (15%)</div><div class="progress-bar"><div class="progress-fill dataengineer" data-width="15%">15%</div></div></div>
+  <div class="job-item"><div class="job-title">Machine Learning Engineer (14%)</div><div class="progress-bar"><div class="progress-fill mlengineer" data-width="14%">14%</div></div></div>
+  <div class="job-item"><div class="job-title">Database Administrator (DBA) (10%)</div><div class="progress-bar"><div class="progress-fill dba" data-width="10%">10%</div></div></div>
+  <div class="job-item"><div class="job-title">BI Analyst (8%)</div><div class="progress-bar"><div class="progress-fill bi" data-width="8%">8%</div></div></div>
+  <div class="job-item"><div class="job-title">Data Architect (8%)</div><div class="progress-bar"><div class="progress-fill architect" data-width="8%">8%</div></div></div>
+  <div class="job-item"><div class="job-title">NLP Engineer (7%)</div><div class="progress-bar"><div class="progress-fill nlp" data-width="7%">7%</div></div></div>
+</div>
+<div class="section" id="entrepreneurContainer" style="display: none;">
+  <h2>Startup Ideas</h2>
+  <div class="role-title" onclick="toggleIdeas('datasciIdeas')">▶ Data Scientist</div>
+  <div id="datasciIdeas" class="startup-ideas">
+    <div class="idea">💡 <strong>Business Insights Tool</strong><br>What: Predictive dashboards for decision-making.<br>Investment: ₹6–10 lakhs</div>
+    <div class="idea">💡 <strong>Data Auditing Platform</strong><br>What: Detect anomalies and ensure data quality.<br>Investment: ₹4–7 lakhs</div>
+  </div>
+  <div class="role-title" onclick="toggleIdeas('dataanalystIdeas')">▶ Data Analyst</div>
+  <div id="dataanalystIdeas" class="startup-ideas">
+    <div class="idea">💡 <strong>Market Research Studio</strong><br>What: Automated competitor and customer analysis.<br>Investment: ₹5–8 lakhs</div>
+    <div class="idea">💡 <strong>Interactive Report Builder</strong><br>What: Create dynamic reports from raw data.<br>Investment: ₹3–6 lakhs</div>
+  </div>
+  <div class="role-title" onclick="toggleIdeas('dataengineerIdeas')">▶ Data Engineer</div>
+  <div id="dataengineerIdeas" class="startup-ideas">
+    <div class="idea">💡 <strong>Real-time Data Pipelines</strong><br>What: Stream and process data in real-time.<br>Investment: ₹7–11 lakhs</div>
+    <div class="idea">💡 <strong>Data Warehouse Service</strong><br>What: Hosted scalable warehouses for startups.<br>Investment: ₹6–9 lakhs</div>
+  </div>
+  <div class="role-title" onclick="toggleIdeas('mlengineerIdeas')">▶ Machine Learning Engineer</div>
+  <div id="mlengineerIdeas" class="startup-ideas">
+    <div class="idea">💡 <strong>ML-Powered Recommendation System</strong><br>What: Personalized suggestions for e-commerce or content.<br>Investment: ₹6–10 lakhs</div>
+    <div class="idea">💡 <strong>AutoML Platform</strong><br>What: Let users build models without coding.<br>Investment: ₹7–12 lakhs</div>
+  </div>
+  <div class="role-title" onclick="toggleIdeas('dbaIdeas')">▶ Database Administrator (DBA)</div>
+  <div id="dbaIdeas" class="startup-ideas">
+    <div class="idea">💡 <strong>Cloud DB Management Service</strong><br>What: Remote DBA for businesses.<br>Investment: ₹5–9 lakhs</div>
+    <div class="idea">💡 <strong>Secure Data Backup Tool</strong><br>What: Encrypted backups with auto restore.<br>Investment: ₹4–7 lakhs</div>
+  </div>
+  <div class="role-title" onclick="toggleIdeas('biIdeas')">▶ BI Analyst</div>
+  <div id="biIdeas" class="startup-ideas">
+    <div class="idea">💡 <strong>BI Tool for Retail</strong><br>What: Track sales, stock, and customer trends.<br>Investment: ₹5–8 lakhs</div>
+    <div class="idea">💡 <strong>Visualization as a Service</strong><br>What: Cloud dashboards for SMEs.<br>Investment: ₹4–6 lakhs</div>
+  </div>
+  <div class="role-title" onclick="toggleIdeas('architectIdeas')">▶ Data Architect</div>
+  <div id="architectIdeas" class="startup-ideas">
+    <div class="idea">💡 <strong>Enterprise Data Blueprint</strong><br>What: Offer data architecture design services.<br>Investment: ₹6–10 lakhs</div>
+    <div class="idea">💡 <strong>Scalable Data Model Generator</strong><br>What: Auto-create schemas for startups.<br>Investment: ₹4–7 lakhs</div>
+  </div>
+  <div class="role-title" onclick="toggleIdeas('nlpIdeas')">▶ NLP Engineer</div>
+  <div id="nlpIdeas" class="startup-ideas">
+    <div class="idea">💡 <strong>Language Model APIs</strong><br>What: Simplify text generation for devs.<br>Investment: ₹6–9 lakhs</div>
+    <div class="idea">💡 <strong>Multilingual Chatbot</strong><br>What: Conversational AI for regional languages.<br>Investment: ₹5–8 lakhs</div>
+  </div>
+</div>
+<script>
+function showJobOpportunities() {
+  let jobContainer = document.getElementById("jobContainer");
+  let entrepreneurContainer = document.getElementById("entrepreneurContainer");
+  entrepreneurContainer.style.display = "none";
+  jobContainer.style.display = "block";
+  let progressBars = document.querySelectorAll(".progress-fill");
+  progressBars.forEach(bar => bar.style.width = "0");
+  setTimeout(() => {
+    progressBars.forEach(bar => {
+      let width = bar.getAttribute("data-width");
+      bar.style.width = width;
+    });
+  }, 100);
+}
+function showEntrepreneurSection() {
+  document.getElementById("jobContainer").style.display = "none";
+  document.getElementById("entrepreneurContainer").style.display = "block";
+}
+function toggleIdeas(id) {
+  const el = document.getElementById(id);
+  el.style.display = (el.style.display === 'block') ? 'none' : 'block';
+}
+</script>
+</body>
+</html>
