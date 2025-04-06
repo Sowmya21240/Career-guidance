@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EEE Career Paths</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f6f8;
+      margin: 0;
+      padding: 30px;
+      text-align: center;
+    }
+    h1 {
+      color: #2c3e50;
+      font-size: 26px;
+    }
+    .button-container {
+      margin: 20px 0;
+    }
+    button {
+      background-color: #3498db;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      margin: 10px;
+      transition: 0.3s;
+    }
+    button:hover {
+      background-color: #2980b9;
+    }
+    .section {
+      max-width: 800px;
+      margin: 30px auto;
+      text-align: left;
+    }
+    .job-container {
+      max-width: 600px;
+      margin: 20px auto;
+      text-align: left;
+      display: none;
+    }
+    .job-item {
+      margin-bottom: 20px;
+    }
+    .job-title {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    .role-title {
+      font-weight: bold;
+      font-size: 18px;
+      cursor: pointer;
+      background: #ecf0f1;
+      padding: 10px;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+    .startup-ideas {
+      display: none;
+      padding: 10px 20px;
+      background: #ffffff;
+      border-left: 3px solid #3498db;
+      margin-bottom: 10px;
+    }
+    .idea {
+      margin-bottom: 10px;
+    }
+    .progress-bar {
+      background-color: #ddd;
+      border-radius: 10px;
+      overflow: hidden;
+      height: 20px;
+      margin-bottom: 15px;
+      box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+    }
+    .progress-fill {
+      height: 100%;
+      color: white;
+      text-align: right;
+      padding-right: 10px;
+      line-height: 20px;
+      font-size: 14px;
+      font-weight: bold;
+      border-radius: 10px;
+      transition: width 4s ease-in-out;
+    }
+    .electrical { background-color: #e67e22; width: 15%; }
+    .embedded { background-color: #27ae60; width: 18%; }
+    .power { background-color: #2980b9; width: 12%; }
+    .instrumentation { background-color: #9b59b6; width: 10%; }
+    .control { background-color: #c0392b; width: 10%; }
+    .renewable { background-color: #1abc9c; width: 8%; }
+    .maintenance { background-color: #34495e; width: 10%; }
+    .vlsi { background-color: #f39c12; width: 5%; }
+    .robotics { background-color: #2c3e50; width: 6%; }
+    .ev { background-color: #e74c3c; width: 6%; }
+  </style>
+</head>
+<body>
+
+<h1>EEE Career Paths</h1>
+<p>Explore different career opportunities in Electrical and Electronics Engineering.</p>
+
+<div class="button-container">
+  <button onclick="showJobOpportunities()">Show Job Opportunities</button>
+  <button onclick="showEntrepreneurSection()">For Entrepreneurs</button>
+</div>
+
+<div class="job-container" id="jobContainer">
+  <h2>EEE Job Market Distribution</h2>
+  <div class="job-item"><div class="job-title">Electrical Design Engineer (15%)</div><div class="progress-bar"><div class="progress-fill electrical" data-width="15%">15%</div></div></div>
+  <div class="job-item"><div class="job-title">Embedded Systems Engineer (18%)</div><div class="progress-bar"><div class="progress-fill embedded" data-width="18%">18%</div></div></div>
+  <div class="job-item"><div class="job-title">Power Electronics Engineer (12%)</div><div class="progress-bar"><div class="progress-fill power" data-width="12%">12%</div></div></div>
+  <div class="job-item"><div class="job-title">Instrumentation Engineer (10%)</div><div class="progress-bar"><div class="progress-fill instrumentation" data-width="10%">10%</div></div></div>
+  <div class="job-item"><div class="job-title">Control Systems Engineer (10%)</div><div class="progress-bar"><div class="progress-fill control" data-width="10%">10%</div></div></div>
+  <div class="job-item"><div class="job-title">Renewable Energy Engineer (8%)</div><div class="progress-bar"><div class="progress-fill renewable" data-width="8%">8%</div></div></div>
+  <div class="job-item"><div class="job-title">Electrical Maintenance Engineer (10%)</div><div class="progress-bar"><div class="progress-fill maintenance" data-width="10%">10%</div></div></div>
+  <div class="job-item"><div class="job-title">VLSI Design Engineer (5%)</div><div class="progress-bar"><div class="progress-fill vlsi" data-width="5%">5%</div></div></div>
+  <div class="job-item"><div class="job-title">Robotics Engineer (6%)</div><div class="progress-bar"><div class="progress-fill robotics" data-width="6%">6%</div></div></div>
+  <div class="job-item"><div class="job-title">Electric Vehicle (EV) Engineer (6%)</div><div class="progress-bar"><div class="progress-fill ev" data-width="6%">6%</div></div></div>
+</div>
+
+<div class="section" id="entrepreneurContainer" style="display: none;">
+  <h2>EEE Startup Ideas by Role</h2>
+  <div class="role-title" onclick="toggleIdeas('electricalIdeas')">▶ Electrical Design Engineer</div>
+  <div id="electricalIdeas" class="startup-ideas">
+    <div class="idea">💡 <strong>Smart Grid Systems</strong><br>What: Designing smart power distribution systems.<br>Investment: ₹10–15 lakhs</div>
+    <div class="idea">💡 <strong>Building Electrical Automation</strong><br>What: Custom designs for smart buildings.<br>Investment: ₹5–8 lakhs</div>
+  </div>
+  <div class="role-title" onclick="toggleIdeas('embeddedIdeas')">▶ Embedded Systems Engineer</div>
+  <div id="embeddedIdeas" class="startup-ideas">
+    <div class="idea">💡 <strong>Industrial IoT Devices</strong><br>What: Custom embedded controllers for factories.<br>Investment: ₹6–9 lakhs</div>
+    <div class="idea">💡 <strong>Home Security Systems</strong><br>What: Smart embedded surveillance products.<br>Investment: ₹4–7 lakhs</div>
+  </div>
+  <div class="role-title" onclick="toggleIdeas('powerIdeas')">▶ Power Electronics Engineer</div>
+  <div id="powerIdeas" class="startup-ideas">
+    <div class="idea">💡 <strong>High-Efficiency Converters</strong><br>What: Products for renewable and industrial use.<br>Investment: ₹8–10 lakhs</div>
+    <div class="idea">💡 <strong>UPS Design Startup</strong><br>What: Custom power backup for institutions.<br>Investment: ₹5–7 lakhs</div>
+  </div>
+  <div class="role-title" onclick="toggleIdeas('instrumentationIdeas')">▶ Instrumentation Engineer</div>
+  <div id="instrumentationIdeas" class="startup-ideas">
+    <div class="idea">💡 <strong>Medical Instrument Sensors</strong><br>What: Real-time sensor systems for hospitals.<br>Investment: ₹6–9 lakhs</div>
+    <div class="idea">💡 <strong>Industrial Measurement Tools</strong><br>What: Portable diagnostic meters.<br>Investment: ₹4–6 lakhs</div>
+  </div>
+  <div class="role-title" onclick="toggleIdeas('controlIdeas')">▶ Control Systems Engineer</div>
+  <div id="controlIdeas" class="startup-ideas">
+    <div class="idea">💡 <strong>Factory Automation Software</strong><br>What: Intelligent PLC & SCADA platforms.<br>Investment: ₹7–10 lakhs</div>
+    <div class="idea">💡 <strong>Miniature Motor Controllers</strong><br>What: Compact control units for robotics.<br>Investment: ₹5–8 lakhs</div>
+  </div>
+  <div class="role-title" onclick="toggleIdeas('renewableIdeas')">▶ Renewable Energy Engineer</div>
+  <div id="renewableIdeas" class="startup-ideas">
+    <div class="idea">💡 <strong>Micro Solar Grid Services</strong><br>What: For rural electrification.<br>Investment: ₹10–12 lakhs</div>
+    <div class="idea">💡 <strong>Wind Energy Controller Units</strong><br>What: Smart systems for turbines.<br>Investment: ₹6–9 lakhs</div>
+  </div>
+  <div class="role-title" onclick="toggleIdeas('maintenanceIdeas')">▶ Electrical Maintenance Engineer</div>
+  <div id="maintenanceIdeas" class="startup-ideas">
+    <div class="idea">💡 <strong>Predictive Maintenance Tools</strong><br>What: IoT-based analytics for industry.<br>Investment: ₹5–7 lakhs</div>
+    <div class="idea">💡 <strong>On-demand Repair Service</strong><br>What: B2B electric equipment services.<br>Investment: ₹3–5 lakhs</div>
+  </div>
+  <div class="role-title" onclick="toggleIdeas('vlsiIdeas')">▶ VLSI Design Engineer</div>
+  <div id="vlsiIdeas" class="startup-ideas">
+    <div class="idea">💡 <strong>FPGA Prototyping Services</strong><br>What: Custom logic circuit dev.<br>Investment: ₹7–10 lakhs</div>
+    <div class="idea">💡 <strong>EDA Script Optimization</strong><br>What: Automation for chip design workflow.<br>Investment: ₹4–6 lakhs</div>
+  </div>
+  <div class="role-title" onclick="toggleIdeas('roboticsIdeas')">▶ Robotics Engineer</div>
+  <div id="roboticsIdeas" class="startup-ideas">
+    <div class="idea">💡 <strong>Service Robots</strong><br>What: Assistive tech for hospitals/homes.<br>Investment: ₹8–12 lakhs</div>
+    <div class="idea">💡 <strong>AI-guided Line Follower Kits</strong><br>What: STEM kits for schools.<br>Investment: ₹3–5 lakhs</div>
+  </div>
+  <div class="role-title" onclick="toggleIdeas('evIdeas')">▶ Electric Vehicle (EV) Engineer</div>
+  <div id="evIdeas" class="startup-ideas">
+    <div class="idea">💡 <strong>Battery Management Systems</strong><br>What: Smart BMS for e-rickshaws/bikes.<br>Investment: ₹6–10 lakhs</div>
+    <div class="idea">💡 <strong>EV Retrofit Kits</strong><br>What: Convert ICE vehicles to EVs.<br>Investment: ₹10–15 lakhs</div>
+  </div>
+</div>
+
+<script>
+function showJobOpportunities() {
+  document.getElementById("entrepreneurContainer").style.display = "none";
+  document.getElementById("jobContainer").style.display = "block";
+  let progressBars = document.querySelectorAll(".progress-fill");
+  progressBars.forEach(bar => bar.style.width = "0");
+  setTimeout(() => {
+    progressBars.forEach(bar => {
+      let width = bar.getAttribute("data-width");
+      bar.style.width = width;
+    });
+  }, 100);
+}
+
+function showEntrepreneurSection() {
+  document.getElementById("jobContainer").style.display = "none";
+  document.getElementById("entrepreneurContainer").style.display = "block";
+}
+
+function toggleIdeas(id) {
+  const el = document.getElementById(id);
+  el.style.display = (el.style.display === 'block') ? 'none' : 'block';
+}
+</script>
+
+</body>
+</html>
