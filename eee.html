@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>EEE Roles</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f4f8;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+      margin-bottom: 30px;
+    }
+
+    .role-card {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      margin: 20px auto;
+      max-width: 600px;
+      padding: 20px;
+      transition: 0.3s;
+    }
+
+    .role-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      font-size: 1.2em;
+      color: #34495e;
+    }
+
+    .arrow {
+      font-size: 1.2em;
+      transition: transform 0.3s ease;
+    }
+
+    .arrow.rotate {
+      transform: rotate(90deg);
+    }
+
+    .learning-content {
+      margin-top: 15px;
+      text-align: left;
+      padding-left: 10px;
+      display: none;
+      color: #555;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>EEE Roles</h1>
+
+  <div class="role-card">
+    <div class="role-header" onclick="toggle(this)">
+      Electrical Design Engineer <span class="arrow">&#9654;</span>
+    </div>
+    <div class="learning-content">
+      <ul>
+        <li>AutoCAD Electrical</li>
+        <li>Electrical Schematics</li>
+        <li>Power Systems Basics</li>
+        <li>Load Flow Analysis</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="role-card">
+    <div class="role-header" onclick="toggle(this)">
+      Power Systems Engineer <span class="arrow">&#9654;</span>
+    </div>
+    <div class="learning-content">
+      <ul>
+        <li>Transmission & Distribution</li>
+        <li>Grid Stability</li>
+        <li>SCADA Systems</li>
+        <li>Protection & Relays</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="role-card">
+    <div class="role-header" onclick="toggle(this)">
+      Energy Storage Specialist <span class="arrow">&#9654;</span>
+    </div>
+    <div class="learning-content">
+      <ul>
+        <li>Battery Technologies</li>
+        <li>Energy Management Systems</li>
+        <li>Power Electronics</li>
+        <li>Smart Charging Systems</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="role-card">
+    <div class="role-header" onclick="toggle(this)">
+      Control Systems Engineer <span class="arrow">&#9654;</span>
+    </div>
+    <div class="learning-content">
+      <ul>
+        <li>PID Controllers</li>
+        <li>State Space Models</li>
+        <li>MATLAB / Simulink</li>
+        <li>PLC Programming</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="role-card">
+    <div class="role-header" onclick="toggle(this)">
+      Instrumentation Engineer <span class="arrow">&#9654;</span>
+    </div>
+    <div class="learning-content">
+      <ul>
+        <li>Sensors & Transducers</li>
+        <li>Measurement Systems</li>
+        <li>Data Acquisition</li>
+        <li>LabVIEW</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="role-card">
+    <div class="role-header" onclick="toggle(this)">
+      Electrical Maintenance Engineer <span class="arrow">&#9654;</span>
+    </div>
+    <div class="learning-content">
+      <ul>
+        <li>Preventive Maintenance</li>
+        <li>Fault Analysis</li>
+        <li>Electrical Safety Standards</li>
+        <li>Maintenance Tools</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="role-card">
+    <div class="role-header" onclick="toggle(this)">
+      Renewable Energy Engineer <span class="arrow">&#9654;</span>
+    </div>
+    <div class="learning-content">
+      <ul>
+        <li>Solar & Wind Systems</li>
+        <li>Grid Integration</li>
+        <li>Inverters & Controllers</li>
+        <li>Green Building Concepts</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="role-card">
+    <div class="role-header" onclick="toggle(this)">
+      Electrical Project Engineer <span class="arrow">&#9654;</span>
+    </div>
+    <div class="learning-content">
+      <ul>
+        <li>Project Planning & Costing</li>
+        <li>Project Documentation</li>
+        <li>Vendor Coordination</li>
+        <li>Compliance & QA</li>
+      </ul>
+    </div>
+  </div>
+
+  <div style="margin-top: 50px; text-align: center;">
+    <p>Want to explore more about EEE? 
+    <a href="eeejob.html" style="color: #3498db; font-weight: bold;">
+    Click here to learn further!</a></p>
+  </div>
+
+  <script>
+    function toggle(header) {
+      const content = header.nextElementSibling;
+      const arrow = header.querySelector('.arrow');
+      content.style.display = content.style.display === "block" ? "none" : "block";
+      arrow.classList.toggle("rotate");
+    }
+  </script>
+</body>
+</html>
