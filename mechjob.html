@@ -1,0 +1,208 @@
+<!DOCTYPE html>  
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mechanical Career Paths</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f4f6f8;
+      margin: 0;
+      padding: 30px;
+      text-align: center;
+    }
+    h1 {
+      color: #2c3e50;
+      font-size: 26px;
+    }
+    .button-container {
+      margin: 20px 0;
+    }
+    button {
+      background-color: #3498db;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      margin: 10px;
+      transition: 0.3s;
+    }
+    button:hover {
+      background-color: #2980b9;
+    }
+    .section {
+      max-width: 800px;
+      margin: 30px auto;
+      text-align: left;
+    }
+    .job-container {
+      max-width: 600px;
+      margin: 20px auto;
+      text-align: left;
+      display: none;
+    }
+    .job-item {
+      margin-bottom: 20px;
+    }
+    .job-title {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    .role-title {
+      font-weight: bold;
+      font-size: 18px;
+      cursor: pointer;
+      background: #ecf0f1;
+      padding: 10px;
+      border-radius: 5px;
+      margin-top: 10px;
+    }
+    .startup-ideas {
+      display: none;
+      padding: 10px 20px;
+      background: #ffffff;
+      border-left: 3px solid #3498db;
+      margin-bottom: 10px;
+    }
+    .idea {
+      margin-bottom: 10px;
+    }
+    .progress-bar {
+      background-color: #ddd;
+      border-radius: 10px;
+      overflow: hidden;
+      height: 20px;
+      margin-bottom: 15px;
+      box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+    }
+    .progress-fill {
+      height: 100%;
+      color: white;
+      text-align: right;
+      padding-right: 10px;
+      line-height: 20px;
+      font-size: 14px;
+      font-weight: bold;
+      border-radius: 10px;
+      transition: width 4s ease-in-out;
+    }
+    .designengineer { background-color: #e67e22; width: 14%; }
+    .manufacturingengineer { background-color: #27ae60; width: 13%; }
+    .thermalengineer { background-color: #2980b9; width: 10%; }
+    .automotiveengineer { background-color: #9b59b6; width: 11%; }
+    .roboticsengineer { background-color: #c0392b; width: 12%; }
+    .maintenanceengineer { background-color: #1abc9c; width: 9%; }
+    .aerospaceengineer { background-color: #34495e; width: 10%; }
+    .toolanddieengineer { background-color: #f39c12; width: 7%; }
+    .productionengineer { background-color: #2c3e50; width: 8%; }
+    .marineengineer { background-color: #e74c3c; width: 6%; }
+  </style>
+</head>
+<body>
+
+<h1>Mechanical Career Paths</h1>
+<p>Explore different career opportunities in Mechanical Engineering.</p>
+
+<div class="button-container">
+  <button onclick="showJobOpportunities()">Show Job Opportunities</button>
+  <button onclick="showEntrepreneurSection()">For Entrepreneurs</button>
+</div>
+
+<div class="job-container" id="jobContainer">
+  <h2>Mechanical Job Market Distribution</h2>
+  <div class="job-item"><div class="job-title">Design Engineer (14%)</div><div class="progress-bar"><div class="progress-fill designengineer" data-width="14%">14%</div></div></div>
+  <div class="job-item"><div class="job-title">Manufacturing Engineer (13%)</div><div class="progress-bar"><div class="progress-fill manufacturingengineer" data-width="13%">13%</div></div></div>
+  <div class="job-item"><div class="job-title">Thermal Engineer (10%)</div><div class="progress-bar"><div class="progress-fill thermalengineer" data-width="10%">10%</div></div></div>
+  <div class="job-item"><div class="job-title">Automotive Engineer (11%)</div><div class="progress-bar"><div class="progress-fill automotiveengineer" data-width="11%">11%</div></div></div>
+  <div class="job-item"><div class="job-title">Robotics Engineer (12%)</div><div class="progress-bar"><div class="progress-fill roboticsengineer" data-width="12%">12%</div></div></div>
+  <div class="job-item"><div class="job-title">Maintenance Engineer (9%)</div><div class="progress-bar"><div class="progress-fill maintenanceengineer" data-width="9%">9%</div></div></div>
+  <div class="job-item"><div class="job-title">Aerospace Engineer (10%)</div><div class="progress-bar"><div class="progress-fill aerospaceengineer" data-width="10%">10%</div></div></div>
+  <div class="job-item"><div class="job-title">Tool and Die Engineer (7%)</div><div class="progress-bar"><div class="progress-fill toolanddieengineer" data-width="7%">7%</div></div></div>
+  <div class="job-item"><div class="job-title">Production Engineer (8%)</div><div class="progress-bar"><div class="progress-fill productionengineer" data-width="8%">8%</div></div></div>
+  <div class="job-item"><div class="job-title">Marine Engineer (6%)</div><div class="progress-bar"><div class="progress-fill marineengineer" data-width="6%">6%</div></div></div>
+</div>
+
+<div class="section" id="entrepreneurContainer" style="display: none;">
+  <h2>Mechanical Startup Ideas by Role</h2>
+  <div class="role-title" onclick="toggleIdeas('designengineerIdeas')">▶ Design Engineer</div>
+  <div id="designengineerIdeas" class="startup-ideas">
+    <div class="idea">💡 <strong>3D CAD Freelancing Studio</strong><br>What: Provide design services using SolidWorks/AutoCAD for startups and SMEs.<br>Investment: ₹50,000–₹1.5 Lakhs</div>
+    <div class="idea">💡 <strong>Custom Product Design Firm</strong><br>What: Help clients design mechanical components for manufacturing.<br>Investment: ₹1–3 Lakhs</div>
+  </div>
+  <div class="role-title" onclick="toggleIdeas('manufacturingengineerIdeas')">▶ Manufacturing Engineer</div>
+  <div id="manufacturingengineerIdeas" class="startup-ideas">
+    <div class="idea">💡 <strong>CNC Machining Workshop</strong><br>What: Start a precision parts manufacturing unit using CNC machines.<br>Investment: ₹5–10 Lakhs</div>
+    <div class="idea">💡 <strong>Lean Manufacturing Consultancy</strong><br>What: Help factories optimize operations using lean principles.<br>Investment: ₹30,000–₹1 Lakh</div>
+  </div>
+  <div class="role-title" onclick="toggleIdeas('thermalengineerIdeas')">▶ Thermal Engineer</div>
+  <div id="thermalengineerIdeas" class="startup-ideas">
+    <div class="idea">💡 <strong>Solar Thermal Solutions</strong><br>What: Build solar water heaters and small-scale thermal systems.<br>Investment: ₹2–5 Lakhs</div>
+    <div class="idea">💡 <strong>HVAC System Optimization</strong><br>What: Offer thermal analysis and energy-saving solutions.<br>Investment: ₹1–2 Lakhs</div>
+  </div>
+  <div class="role-title" onclick="toggleIdeas('automotiveengineerIdeas')">▶ Automotive Engineer</div>
+  <div id="automotiveengineerIdeas" class="startup-ideas">
+    <div class="idea">💡 <strong>EV Retrofit Kits</strong><br>What: Convert petrol/diesel vehicles into electric vehicles.<br>Investment: ₹3–7 Lakhs</div>
+    <div class="idea">💡 <strong>Vehicle Customization Garage</strong><br>What: Modify vehicles for performance and aesthetics.<br>Investment: ₹2–5 Lakhs</div>
+  </div>
+  <div class="role-title" onclick="toggleIdeas('roboticsengineerIdeas')">▶ Robotics Engineer</div>
+  <div id="roboticsengineerIdeas" class="startup-ideas">
+    <div class="idea">💡 <strong>Educational Robotics Kits</strong><br>What: Build and sell DIY robotics kits to schools and colleges.<br>Investment: ₹1–3 Lakhs</div>
+    <div class="idea">💡 <strong>Industrial Automation Services</strong><br>What: Automate manufacturing tasks using custom robots.<br>Investment: ₹5–10 Lakhs</div>
+  </div>
+  <div class="role-title" onclick="toggleIdeas('maintenanceengineerIdeas')">▶ Maintenance Engineer</div>
+  <div id="maintenanceengineerIdeas" class="startup-ideas">
+    <div class="idea">💡 <strong>Predictive Maintenance App</strong><br>What: Build a tool that alerts industries about equipment servicing.<br>Investment: ₹1–2 Lakhs</div>
+    <div class="idea">💡 <strong>Equipment Health Audit Services</strong><br>What: Perform audits on industrial machines and suggest improvements.<br>Investment: ₹50,000–₹1 Lakh</div>
+  </div>
+  <div class="role-title" onclick="toggleIdeas('aerospaceengineerIdeas')">▶ Aerospace Engineer</div>
+  <div id="aerospaceengineerIdeas" class="startup-ideas">
+    <div class="idea">💡 <strong>Drone Manufacturing</strong><br>What: Design and sell drones for surveillance or agriculture.<br>Investment: ₹3–6 Lakhs</div>
+    <div class="idea">💡 <strong>Aerospace Simulation Training</strong><br>What: Provide flight simulations for pilot or drone operator training.<br>Investment: ₹5–10 Lakhs</div>
+  </div>
+  <div class="role-title" onclick="toggleIdeas('toolanddieengineerIdeas')">▶ Tool and Die Engineer</div>
+  <div id="toolanddieengineerIdeas" class="startup-ideas">
+    <div class="idea">💡 <strong>Die Manufacturing Workshop</strong><br>What: Manufacture dies for local plastic or metal industries.<br>Investment: ₹4–8 Lakhs</div>
+    <div class="idea">💡 <strong>CAD Die Design Services</strong><br>What: Offer design services for tool and die companies.<br>Investment: ₹50,000–₹1.5 Lakhs</div>
+  </div>
+  <div class="role-title" onclick="toggleIdeas('productionengineerIdeas')">▶ Production Engineer</div>
+  <div id="productionengineerIdeas" class="startup-ideas">
+    <div class="idea">💡 <strong>Small Batch Manufacturing Unit</strong><br>What: Offer small-batch production for prototypes/startups.<br>Investment: ₹3–6 Lakhs</div>
+    <div class="idea">💡 <strong>Production Planning Software</strong><br>What: Build tools for scheduling and workflow tracking.<br>Investment: ₹2–4 Lakhs</div>
+  </div>
+  <div class="role-title" onclick="toggleIdeas('marineengineerIdeas')">▶ Marine Engineer</div>
+  <div id="marineengineerIdeas" class="startup-ideas">
+    <div class="idea">💡 <strong>Boat Engine Repair Hub</strong><br>What: Service fishing and small commercial boats.<br>Investment: ₹2–4 Lakhs</div>
+    <div class="idea">💡 <strong>Marine Equipment Rental</strong><br>What: Rent out diving, fishing, or underwater gear.<br>Investment: ₹3–5 Lakhs</div>
+  </div>
+</div>
+
+<script>
+function showJobOpportunities() {
+  document.getElementById("entrepreneurContainer").style.display = "none";
+  document.getElementById("jobContainer").style.display = "block";
+  let progressBars = document.querySelectorAll(".progress-fill");
+  progressBars.forEach(bar => bar.style.width = "0");
+  setTimeout(() => {
+    progressBars.forEach(bar => {
+      let width = bar.getAttribute("data-width");
+      bar.style.width = width;
+    });
+  }, 100);
+}
+
+function showEntrepreneurSection() {
+  document.getElementById("jobContainer").style.display = "none";
+  document.getElementById("entrepreneurContainer").style.display = "block";
+}
+
+function toggleIdeas(id) {
+  const el = document.getElementById(id);
+  el.style.display = (el.style.display === 'block') ? 'none' : 'block';
+}
+</script>
+
+</body>
+</html>

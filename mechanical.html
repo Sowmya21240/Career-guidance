@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mechanical Engineering Roles</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #f0f4f8;
+      margin: 0;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+      margin-bottom: 30px;
+    }
+
+    .role-card {
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      margin: 20px auto;
+      max-width: 600px;
+      padding: 20px;
+      transition: 0.3s;
+    }
+
+    .role-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      font-size: 1.2em;
+      color: #34495e;
+    }
+
+    .arrow {
+      font-size: 1.2em;
+      transition: transform 0.3s ease;
+    }
+
+    .arrow.rotate {
+      transform: rotate(90deg);
+    }
+
+    .learning-content {
+      margin-top: 15px;
+      text-align: left;
+      padding-left: 10px;
+      display: none;
+      color: #555;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Mechanical Engineering Roles</h1>
+
+  <div class="role-card">
+    <div class="role-header" onclick="toggle(this)">Design Engineer <span class="arrow">&#9654;</span></div>
+    <div class="learning-content">
+      <ul>
+        <li>CAD Software (SolidWorks, AutoCAD)</li>
+        <li>Product Design & Development</li>
+        <li>Design for Manufacturing</li>
+        <li>Stress and Strain Analysis</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="role-card">
+    <div class="role-header" onclick="toggle(this)">Manufacturing Engineer <span class="arrow">&#9654;</span></div>
+    <div class="learning-content">
+      <ul>
+        <li>Lean Manufacturing</li>
+        <li>Six Sigma</li>
+        <li>Process Optimization</li>
+        <li>Industrial Automation</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="role-card">
+    <div class="role-header" onclick="toggle(this)">Thermal Engineer <span class="arrow">&#9654;</span></div>
+    <div class="learning-content">
+      <ul>
+        <li>Heat Transfer</li>
+        <li>Thermodynamics</li>
+        <li>CFD Tools (ANSYS Fluent)</li>
+        <li>Cooling Systems Design</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="role-card">
+    <div class="role-header" onclick="toggle(this)">Automotive Engineer <span class="arrow">&#9654;</span></div>
+    <div class="learning-content">
+      <ul>
+        <li>Vehicle Dynamics</li>
+        <li>IC Engines & EV Technology</li>
+        <li>Automotive Safety Systems</li>
+        <li>Chassis and Drivetrain Design</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="role-card">
+    <div class="role-header" onclick="toggle(this)">Robotics Engineer <span class="arrow">&#9654;</span></div>
+    <div class="learning-content">
+      <ul>
+        <li>Mechatronics</li>
+        <li>Embedded Systems</li>
+        <li>Robot Kinematics</li>
+        <li>Control Systems</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="role-card">
+    <div class="role-header" onclick="toggle(this)">Maintenance Engineer <span class="arrow">&#9654;</span></div>
+    <div class="learning-content">
+      <ul>
+        <li>Preventive Maintenance</li>
+        <li>Reliability Engineering</li>
+        <li>Equipment Diagnostics</li>
+        <li>Root Cause Analysis</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="role-card">
+    <div class="role-header" onclick="toggle(this)">Aerospace Engineer <span class="arrow">&#9654;</span></div>
+    <div class="learning-content">
+      <ul>
+        <li>Aerodynamics</li>
+        <li>Propulsion Systems</li>
+        <li>Aircraft Structures</li>
+        <li>Flight Mechanics</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="role-card">
+    <div class="role-header" onclick="toggle(this)">Tool and Die Engineer <span class="arrow">&#9654;</span></div>
+    <div class="learning-content">
+      <ul>
+        <li>Tool Design</li>
+        <li>Jigs and Fixtures</li>
+        <li>Mold Making</li>
+        <li>Precision Machining</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="role-card">
+    <div class="role-header" onclick="toggle(this)">Production Engineer <span class="arrow">&#9654;</span></div>
+    <div class="learning-content">
+      <ul>
+        <li>Production Planning</li>
+        <li>Quality Control</li>
+        <li>Inventory Management</li>
+        <li>Factory Workflow Optimization</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="role-card">
+    <div class="role-header" onclick="toggle(this)">Marine Engineer <span class="arrow">&#9654;</span></div>
+    <div class="learning-content">
+      <ul>
+        <li>Marine Engines</li>
+        <li>Ship Design</li>
+        <li>Hydraulics and Fluid Systems</li>
+        <li>Maritime Regulations</li>
+      </ul>
+    </div>
+  </div>
+
+  <div style="margin-top: 50px; text-align: center;">
+    <p>Interested in Mechanical Engineering Careers? 
+    <a href="mechjob.html" style="color: #3498db; font-weight: bold;">
+    Click here to explore more!</a></p>
+  </div>
+
+  <script>
+    function toggle(header) {
+      const content = header.nextElementSibling;
+      const arrow = header.querySelector('.arrow');
+      content.style.display = content.style.display === "block" ? "none" : "block";
+      arrow.classList.toggle("rotate");
+    }
+  </script>
+</body>
+</html>
